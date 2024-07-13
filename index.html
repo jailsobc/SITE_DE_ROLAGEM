@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt_Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site de rolagem paralaxe</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul class="navigation">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Eventos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </header>
+    <section class="parallax">
+      <h2 id="text">Site Paralaxe</h2>
+      <img src="/assts/monutain_01.png" alt="m1" />
+      <img src="assts/trees_02.png" alt="" />
+      <img src="assts/monutain_02.png" alt="m2" />
+      <img src="assts/trees_01.png" alt="" />
+      <img src="assts/man.png" alt="" />
+      <img src="assts/plants.png" alt="" />
+    </section>
+    <section class="sec">
+      <h2>Site de rolagem paralaxe</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus f</p>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.from("#m1", {
+        scrollTrigger: {
+          scrub: true,
+        },
+        y: 100,
+      });
+      gsap.from("#m2", {
+        scrollTrigger: {
+          scrub: true,
+        },
+        y: 50,
+      });
+      gsap.from("#t2", {
+        scrollTrigger: {
+          scrub: true,
+        },
+        x: -50,
+      });
+      gsap.from("#t1", {
+        scrollTrigger: {
+          scrub: true,
+        },
+        x: 50,
+      });
+      gsap.from("#man", {
+        scrollTrigger: {
+          scrub: true,
+        },
+        x: -250,
+      });
+      gsap.from("#plants", {
+        scrollTrigger: {
+          scrub: true,
+        },
+        x: -50,
+      });
+      gsap.from("#text", {
+        scrollTrigger: {
+          scrub: true,
+        },
+        x: 600,
+      });
+    </script>
+  </body>
+</html>
